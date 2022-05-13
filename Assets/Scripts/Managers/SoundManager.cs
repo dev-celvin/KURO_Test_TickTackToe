@@ -57,6 +57,7 @@ public class SoundManager : PersistentSingleton<SoundManager>
                 GameObject go = new GameObject("bgmSource");
                 go.transform.SetParent(transform, false);
                 bgmSource = go.AddComponent<AudioSource>();
+                bgmSource.loop = true;
             }
             return bgmSource;
         }
